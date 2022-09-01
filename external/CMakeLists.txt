@@ -7,4 +7,4 @@ include(cmake-scripts/doxygen.cmake)
 include(cmake-scripts/link-time-optimization.cmake)
 include(cmake-scripts/sanitizers.cmake)
 include(cmake-scripts/tools.cmake)
-
+include(cmake-scripts/glsl-shaders.cmake)
