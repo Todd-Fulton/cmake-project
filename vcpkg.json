@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+  "name": "MY_PROJECT",
+  "version": "0.0.1",
+  "features": {
+    "tests": {
+      "description": "Build tests.",
+      "dependencies": [
+        "gtest"
+      ]
+    },
+    "benchmarks": {
+      "description": "Build benchmarks.",
+      "dependencies": [
+        "benchmark"
+      ]
+    },
+    "examples": {
+      "description": "Build examples."
+    },
+    "profiling": {
+      "description": "Enable profiling support.",
+      "dependencies": [
+        {
+          "name": "tracy",
+          "features": [
+            "cli-tools"
+          ]
+        }
+      ]
+    }
+  }
+}

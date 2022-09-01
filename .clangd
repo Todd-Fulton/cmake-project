@@ -1,0 +1,5 @@
+If:                               # Apply this config conditionally
+  PathMatch: [.*\.hpp, .*\.cpp]
+CompileFlags:                     # Tweak the parse settings
+  Remove: -std=gnu++23
+  Add: [-std=gnu++2b, -Wall]             # treat all files as C++, enable more warnings
