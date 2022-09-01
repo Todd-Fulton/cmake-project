@@ -1,0 +1,10 @@
+include(cmake-scripts/c++-standards.cmake)
+include(cmake-scripts/c-standards.cmake)
+include(cmake-scripts/afl-fuzzing.cmake)
+include(cmake-scripts/code-coverage.cmake)
+include(cmake-scripts/compiler-options.cmake)
+include(cmake-scripts/doxygen.cmake)
+include(cmake-scripts/link-time-optimization.cmake)
+include(cmake-scripts/sanitizers.cmake)
+include(cmake-scripts/tools.cmake)
+

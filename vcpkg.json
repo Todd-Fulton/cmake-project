@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
-  "name": "MY_PROJECT",
+  "name": "libhello",
   "version": "0.0.1",
   "features": {
     "tests": {
@@ -22,10 +22,7 @@
       "description": "Enable profiling support.",
       "dependencies": [
         {
-          "name": "tracy",
-          "features": [
-            "cli-tools"
-          ]
+          "name": "tracy"
         }
       ]
     }
