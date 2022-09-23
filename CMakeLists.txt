@@ -11,10 +11,6 @@ option(${PROJECT_NAME}_BENCHMARKS "Build the benchmarks." OFF)
 option(${PROJECT_NAME}_EXAMPLES "Build the examples." OFF)
 option(${PROJECT_NAME}_PROFILING "Enable profiling support." OFF)
 
-set(${PROJECT_NAME}_SANITIZERS "" CACHE STRING
-  "Enable sanatizers. [Address;Memory;MemoryWithOrigins;Undefined;Thread;Leak;CFI]"
-)
-
 option(${PROJECT_NAME}_DOCS "Build the docs." OFF)
 
 if(${PROJECT_NAME}_TESTING)
@@ -39,8 +35,6 @@ endif()
 
 set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake
   CACHE STRING "Vcpkg toolchain file")
-
-set(USE_SANITIZER "${PROJECT_NAME}_SANITIZERS")
 
 # Include external dependencies not available in vcpkg
 add_subdirectory(external)
@@ -68,7 +62,7 @@ add_subdirectory(src)
 
 if(${PROJECT_NAME}_TESTING)
   enable_testing()
-  add_subdirector(tests)
+  add_subdirectory(tests)
 endif()
 
 if(${PROJECT_NAME}_EXAMPLES)
